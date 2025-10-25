@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="player-container">
+        <div class="cover" id="cover-container">
+            <img id="cover-img" src="img/1.png" alt="cover">
+        </div>
+
+        <div class="song-details">
+            <h2 id="title">Song Title</h2>
+            <h3 id="artist">Artist Name</h3>
+        </div>
+
+        <audio id="audio" src="songs/apna_bana_le.mp3"></audio>
+
+        <div class="controls">
+            <button id="prev">&#171;</button>
+            <button id="play">&#9658;</button>
+            <button id="next">&#187;</button>
+        </div>
+
+        <div class="progress-container">
+            <span id="current-time">0:00</span>
+            <input type="range" id="progress" value="0" min="0" max="100">
+            <span id="duration">0:00</span>
+        </div>
+
+        <div class="volume-container">
+            <label for="volume">Volume</label>
+            <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+        </div>
+
+        <div class="playlist">
+            <h3>Playlist</h3>
+            <ul id="playlist"></ul>
+        </div>
+
+        <label><input type="checkbox" id="autoplay"> Autoplay</label>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
